@@ -17,10 +17,46 @@ so... we need to get values with : getElemenByID()
 which means, we need ID's on our values
 */
 
-const formButton = document.getElementById('formSubmit')
+const formButton = document.getElementById('formSubmit');
 
-formButton.addEventListener('click', (event) =>{
-    event.preventDefault()
-    console.log('pls work')
+let number = 0
 
-})
+formButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Get values from form inputs
+    let firstNameValue = document.getElementById('firstName').value;
+    let lastNameValue = document.getElementById('lastName').value;
+    let favoriteColorValue = document.getElementById('favoriteColor').value;
+
+    // Create a new row
+    let newTableRow = document.createElement('tr');
+
+    let numberNode = document.createElement('td')
+    numberNode.innerHTML =
+    newTableRow.append(numberNode)
+
+    // Create table data cells
+    let firstNameNode = document.createElement('td');
+    firstNameNode.innerHTML = firstNameValue;
+    newTableRow.appendChild(firstNameNode);
+
+    let lastNameNode = document.createElement('td');
+    lastNameNode.innerHTML = lastNameValue;
+    newTableRow.appendChild(lastNameNode);
+
+    let favoriteColorNode = document.createElement('td');
+    favoriteColorNode.innerHTML = favoriteColorValue;
+    newTableRow.appendChild(favoriteColorNode);
+
+    // Append the new row to the table
+    document.getElementById('tBody').appendChild(newTableRow);
+
+    document.getElementById('firstName').value = ''
+    document.getElementById('lastName').value = ''
+    document.getElementById('favoriteColor').value = ''
+
+    number++
+
+
+});
