@@ -33,7 +33,7 @@ formButton.addEventListener('click', (event) => {
     let newTableRow = document.createElement('tr');
 
     let numberNode = document.createElement('td')
-    numberNode.innerHTML =
+    numberNode.innerHTML = number + 1
     newTableRow.append(numberNode)
 
     // Create table data cells
